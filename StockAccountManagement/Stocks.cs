@@ -11,6 +11,7 @@ namespace StockAccountManagement
     {
         StockManagement manage = JsonConvert.DeserializeObject<StockManagement>(File.ReadAllText(@"D:\tvstraining\StockAccountManagement\StockAccountManagement\StockReports.json"));
         
+        //Printing Stock Report
         public void Stock_Management()
         {
             string stockRecord = string.Empty;
@@ -24,6 +25,8 @@ namespace StockAccountManagement
             }
             Console.WriteLine(stockRecord);
         }
+
+        //Calculating each stock value
         public void CalculateEachStockValue()
         {
             double value = 0, price = 0;
@@ -38,6 +41,8 @@ namespace StockAccountManagement
                 Console.WriteLine("Value of the particular stock for "+jsonObject.Name+" is "+value+"\n");
             }
         }
+
+        //Calculating total stock value
         public void CalculateTotalStockValue()
         {
             double value = 0, price = 0, totalValue = 0;
