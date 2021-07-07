@@ -6,6 +6,7 @@ namespace StockAccountManagement
     {
         static void Main(string[] args)
         {
+            //Creating object
             Stocks stock = new Stocks();
             stock.Stock_Management();
             stock.CalculateEachStockValue();
